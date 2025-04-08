@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-neutral-50 text-neutral-800;
+  }
+}
+
+@layer components {
+  .tab-active {
+    @apply border-b-2 border-primary text-primary font-medium;
+  }
+  
+  .tab-inactive {
+    @apply border-b-2 border-transparent text-neutral-600;
+  }
+  
+  .mobile-nav-item {
+    @apply py-2 px-4 flex flex-col items-center;
+  }
+  
+  .mobile-nav-item-active {
+    @apply text-primary;
+  }
+  
+  .mobile-nav-item-inactive {
+    @apply text-neutral-500;
+  }
+
+  .truck-cell {
+    @apply min-h-24 bg-neutral-50 border border-neutral-300 rounded flex flex-col p-2 transition-colors duration-200;
+  }
+  
+  .truck-cell:hover {
+    @apply bg-neutral-100;
+  }
+
+  .box-in-truck {
+    @apply w-full h-full p-2 rounded text-white text-xs flex items-center justify-center shadow-sm transition-transform duration-200;
+  }
+  
+  .box-in-truck:hover {
+    @apply transform scale-[1.02] shadow-md;
+  }
+
+  .status-packed {
+    @apply bg-primary bg-opacity-20 text-primary text-xs py-1 px-2 rounded-full;
+  }
+
+  .status-staging {
+    @apply bg-destructive bg-opacity-20 text-destructive text-xs py-1 px-2 rounded-full;
+  }
+
+  .status-loaded {
+    @apply bg-secondary bg-opacity-20 text-secondary text-xs py-1 px-2 rounded-full;
+  }
+
+  .status-out {
+    @apply bg-neutral-500 bg-opacity-20 text-neutral-500 text-xs py-1 px-2 rounded-full;
+  }
+
+  .status-delivered {
+    @apply bg-accent bg-opacity-20 text-accent text-xs py-1 px-2 rounded-full;
+  }
+
+  .status-unpacked {
+    @apply bg-neutral-300 bg-opacity-20 text-neutral-500 text-xs py-1 px-2 rounded-full;
+  }
+}
