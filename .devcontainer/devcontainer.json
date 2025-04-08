@@ -1,0 +1,20 @@
+{
+  "name": "Replit Conversion Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/android-sdk:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot-chat",
+        "ms-vsliveshare.vsliveshare",
+        "Replit.replit"  // (if available, or any community Replit theme/extension)
+      ]
+    }
+  },
+  "postCreateCommand": "npm install && pip install -r requirements.txt"
+}
+
